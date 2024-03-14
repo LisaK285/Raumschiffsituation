@@ -27,10 +27,10 @@ public class Raumschiff {
     private String schiffsname;
 
     /** Der Kommunikator auf dem alle Meldungen gespeichert werden*/
-    private static ArrayList<String> broadcastKommunikator = new ArrayList<String>();
+    private static final ArrayList<String> broadcastKommunikator = new ArrayList<String>();
 
     /** Das Verzeichnis aus dem alle momentanen Ladungen ausgelesen werden können */
-    private ArrayList<Ladung> ladungsverzeichnis = new ArrayList<Ladung>();
+    private final ArrayList<Ladung> ladungsverzeichnis = new ArrayList<Ladung>();
 
     public Raumschiff() {
 
@@ -194,13 +194,13 @@ public class Raumschiff {
     {
         int benoetigteReparaturenAnzahl = 0;
 
-        if(schutzschilde == true){
+        if(schutzschilde){
             benoetigteReparaturenAnzahl++;
         }
-        if(energieversorgung == true){
+        if(energieversorgung){
             benoetigteReparaturenAnzahl++;
         }
-        if(schiffshuelle == true){
+        if(schiffshuelle){
             benoetigteReparaturenAnzahl++;
         }
 
@@ -211,13 +211,13 @@ public class Raumschiff {
         }
         int reparaturInProzent = ((randomNumber * getAndroidenAnzahl()) / benoetigteReparaturenAnzahl);
 
-        if(schutzschilde == true){
+        if(schutzschilde){
             setSchildeInProzent(getSchildeInProzent() + reparaturInProzent);
         }
-        if(energieversorgung == true){
+        if(energieversorgung){
             setEnergieversorgungInProzent(getEnergieversorgungInProzent() + reparaturInProzent);
         }
-        if(schiffshuelle == true){
+        if(schiffshuelle){
             setHuelleInProzent(getHuelleInProzent() + reparaturInProzent);
         }
 
