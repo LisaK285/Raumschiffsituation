@@ -27,4 +27,4 @@ public abstract class Ladung {
     /**Die toString() Methode wird überschrieben um den Namen der Klasse, deren Bezeichnung und deren Menge auszugeben.*/
 
     public abstract String toString();
-}
+}//aAAAAAAAAAAAAAAAAAAA
