@@ -12,7 +12,7 @@ public class Gast extends Ladung {
         this.sprache = sprache;
     }
 
-//test
+
 
 
 
