@@ -255,4 +255,8 @@ public class Raumschiff {
             }
         }
     }
+
+    public void ladungsverzeichnisSpeichern() {
+
+    }
 }
